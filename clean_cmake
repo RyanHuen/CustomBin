@@ -1,0 +1,31 @@
+#!/bin/bash
+
+current_dir=$(basename "$(pwd)")
+abs_dir=$(pwd)
+
+# 检查目录名是否以 "build" 结尾
+if [[ $current_dir == *build ]]; then
+    # 显示提示信息
+    echo -n "current path is :{$abs_dir},ro you wish to continue with clean build? (y/n)  "
+    
+    # 读取响应
+    read answer
+    case $answer in
+        [Yy]* )
+            echo "You chose to continue."
+            # 放置 "yes" 的情况下要执行的代码
+            rm -rf *
+            cmake ..
+            make
+            ;;
+        [Nn]* )
+            echo "You chose not to continue."
+            # 放置 "no" 的情况下要执行的代码
+            ;;
+        * )
+            echo "Please answer yes or no."
+            ;;
+        esac
+else
+    echo "The directory does not end with 'build' it is wrong place."
+fi

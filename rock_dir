@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+function rockliauto {
+    source cd_by_params.sh /home/xuanweihong/Extra/Project/LiAuto
+}
+
+function rockextra {
+    source cd_by_params.sh /home/xuanweihong/Extra/
+}
+
+function rockSolid {
+    source cd_by_params.sh /home/xuanweihong/Solid/
+}
+
+function rockproject {
+    source cd_by_params.sh /home/xuanweihong/Extra/Project
+}
+
+function rockg {
+    source cd_by_params.sh $GRT_SOURCE_ROOT
+}
+
+function rockg8155 {
+    source cd_by_params.sh $GRT_SOURCE_ROOT_8155
+}
+
+function rockChro {
+    source cd_by_params.sh /home/xuanweihong/Solid/Chromium
+}
+
+function ssh_display {
+    export DISPLAY=:1
+}
