@@ -1,7 +1,10 @@
 #!/bin/zsh
 
+###########################################
+# CUSTOM PATH AUTO CD
+###########################################
 function rockliauto {
-    source cd_by_params.sh /home/xuanweihong/Extra/Project/LiAuto
+    source cd_by_params.sh /home/xuanweihong/Solid/LiAuto
 }
 
 function rockextra {
@@ -27,6 +30,10 @@ function rockg8155 {
 function rockChro {
     source cd_by_params.sh /home/xuanweihong/Solid/Chromium
 }
+
+###########################################
+# CUSTOM COMMAND
+###########################################
 
 function ssh_display {
     export DISPLAY=:1
